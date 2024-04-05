@@ -1,0 +1,16 @@
+{
+  "name": "roo-keys",
+  "version": "1.0.0",
+  "description": "![Banner Github](https://github.com/csacet/Dsolve-2024/assets/90597530/365f4d52-fd34-4df5-948d-8e95745a653a)",
+  "main": "Backend.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^10.10.0"
+  },
+  "devDependencies": {}
+}

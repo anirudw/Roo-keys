@@ -1,119 +1,132 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+    <script src="Backend.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing:border-box;
-}
-img{object-fit:fill;}
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.container {
-  padding: 64px;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both
-}
-
-.column-66 {
-  float: left;
-  width: 66.66666%;
-  padding: 20px;
-}
-
-.column-33 {
-  float: left;
-  width: 33.33333%;
-  padding: 20px;
-}
-
-.large-font {
-  font-size: 48px;
-}
-
-.xlarge-font {
-  font-size: 64px
-}
-.d{
- display:grid;
- justify-content: center;
-}
-.s{ 
-    margin-top:100px;
-    width:600px;
-    height:55px;
-    font-size:large;
-    border-radius:20px;
-    border-color: rgba(222, 222, 238, 0.882);
-    text-align:center;
-    box-shadow: 0px 1px 6px rgba(0,0,0,0.2);
-    border:none;
-
-}
-
-.button {
-  border: none;
-  color: white;
-  padding: 14px 28px;
-  font-size: 16px;
-  cursor: pointer;
-  background-color: #04AA6D;
-}
-
-img {
-  display: block;
-  height: auto;
-  max-width: 100%;
-}
-
-@media screen and (max-width: 1000px) {
-  .column-66,
-  .column-33 {
-    width: 100%;
-    text-align: center;
-  }
-  img {
-    margin: auto;
-  }
-}
-
-.rating {
-  unicode-bidi: bidi-override;
-  direction: rtl;
-  text-align: left;
-}
-.rating > input {
-  display: none;
-}
-.rating > label {
-  display: inline-block;
-  margin: 0 5px;
-  font-size: 24px;
-  cursor: pointer;
-  color: #ccc; /* Empty star color */
-}
-.rating > input:checked ~ label,
-.rating > label:hover,
-.rating > label:hover ~ label {
-  color: #ffca08; /* Selected star color */
-}
-</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        img {
+            object-fit: fill;
+        }
+        
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .container {
+            padding: 64px;
+        }
+        
+        .row:after {
+            content: "";
+            display: table;
+            clear: both
+        }
+        
+        .column-66 {
+            float: left;
+            width: 66.66666%;
+            padding: 20px;
+        }
+        
+        .column-33 {
+            float: left;
+            width: 33.33333%;
+            padding: 20px;
+        }
+        
+        .large-font {
+            font-size: 48px;
+        }
+        
+        .xlarge-font {
+            font-size: 64px
+        }
+        
+        .d {
+            display: grid;
+            justify-content: center;
+        }
+        
+        .s {
+            margin-top: 100px;
+            width: 600px;
+            height: 55px;
+            font-size: large;
+            border-radius: 20px;
+            border-color: rgba(222, 222, 238, 0.882);
+            text-align: center;
+            box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2);
+            border: none;
+        }
+        
+        .button {
+            border: none;
+            color: white;
+            padding: 14px 28px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #04AA6D;
+        }
+        
+        img {
+            display: block;
+            height: auto;
+            max-width: 100%;
+        }
+        
+        @media screen and (max-width: 1000px) {
+            .column-66,
+            .column-33 {
+                width: 100%;
+                text-align: center;
+            }
+            img {
+                margin: auto;
+            }
+        }
+        
+        .rating {
+            unicode-bidi: bidi-override;
+            direction: rtl;
+            text-align: left;
+        }
+        
+        .rating>input {
+            display: none;
+        }
+        
+        .rating>label {
+            display: inline-block;
+            margin: 0 5px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #ccc;
+            /* Empty star color */
+        }
+        
+        .rating>input:checked~label,
+        .rating>label:hover,
+        .rating>label:hover~label {
+            color: #ffca08;
+            /* Selected star color */
+        }
+    </style>
 </head>
+
 <body>
-<div  >
-  <div class=" flex flex-row justify-between">
-    <filter>
-    <label for="filter">Filters</label>    
-    <select name="filters" id="filter" class="border-solid">
+    <div>
+        <div class=" flex flex-row justify-between">
+            <filter>
+                <label for="filter">Filters</label>
+                <select name="filters" id="filter" class="border-solid">
       <option value="Dist">Distance from Cet</option>
       <option value="Rate">Rate</option>
       <option value="Room Capacity">Room Capacity</option>
@@ -122,54 +135,49 @@ img {
     
    
     </select>
-    </filter>
+            </filter>
 
-<h1 class="large-font mr-44 font-mono">Roomies </h1>
+            <h1 class="large-font mr-44 font-mono">Roomies </h1>
 
 
-<div></div>
-</div>
-<div class="d"
->
-    <input type="text" placeholder="Search" class="s">
-</div>
+            <div></div>
+        </div>
+        <div class="d">
+            <input type="text" placeholder="Search" class="s">
+        </div>
 
-<div id="componentContainer"></div>
+        <div id="componentContainer"></div>
 
-<div id="componentContainer"></div>
+        <div id="componentContainer"></div>
 
 
 
 </body>
 <script>
+    const value = document.querySelector("select")
+    console.log(value)
+    let componentData = [{
+            id: 1,
+            name: "Sally's Homes",
+            rent: 2500,
+            roomsAvailable: 3
+        }, {
+            id: 2,
+            name: "Noteworthy",
+            rent: 4500,
+            roomsAvailable: 2
+        }, {
+            id: 3,
+            name: "Lotus Home",
+            rent: 2500,
+            roomsAvailable: 2
+        }
+        // Add more data objects as needed
+    ];
 
-const value=document.querySelector("select")
-  console.log(value)
-  let componentData = [
-            {
-                id: 1,
-                name: "Sally's Homes",
-                rent: 2500,
-                roomsAvailable: 3
-            },
-            {
-                id: 2,
-                name: "Noteworthy",
-                rent: 4500,
-                roomsAvailable: 2
-            },
-            {
-                id: 3,
-                name: "Noteworthy",
-                rent: 2500,
-                roomsAvailable: 2
-            }
-            // Add more data objects as needed
-        ];
-
-        // Function to generate HTML markup for a single component
-        function generateComponentMarkup(data) {
-            return `
+    // Function to generate HTML markup for a single component
+    function generateComponentMarkup(data) {
+        return `
             <div id="${data.id}" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 inline-block mr-10 ml-16 mt-10">
                 <a href="#">
                     <img class="rounded-t-lg" src="4.webp" alt="" />
@@ -207,84 +215,83 @@ const value=document.querySelector("select")
                 </div>
             </div>
             `;
-        }
-
-        // Function to render components
-        function renderComponents() {
-            const container = document.getElementById("componentContainer");
-            container.innerHTML = componentData.map(generateComponentMarkup).join('');
-        }
-        renderComponents();
-  
-  value.addEventListener('change',()=>{
-  let c=value.value
-  if(c==="Rate"){
-    console.log("TRUE")
-
-  
-
-    const d1 = document.getElementById("1");
-    const d2 = document.getElementById("2");
-    const d3 = document.getElementById("3");
-    console.log(d1)
-    const r1 = parseInt(document.querySelector("#Rent1").innerText);
-    const r2 = parseInt(document.querySelector("#Rent2").innerText);
-    const r3 = parseInt(document.querySelector("#Rent3").innerText);
-    
-    
-    
-
-    
-    componentData=componentData.sort((a, b) => a.rent - b.rent);
-    console.log(componentData);
-    
-   
-    let cotainer = document.getElementById("componentContainer");
-    cotainer.innerHTML="";
-
-
-    renderComponents();
-        
-    }
-  else if(c==="Room Capacity"){
-    console.log("TRUE");
-
-  
-
-    const d4 = document.getElementById("1");
-    const d5 = document.getElementById("2");
-    const d6 = document.getElementById("3");
-    
-    const r4 = parseInt(document.querySelector("#Room1").innerText);
-    const r5 = parseInt(document.querySelector("#Room2").innerText);
-    const r6 = parseInt(document.querySelector("#Room3").innerText);
-    
-    
-    
-
-    
-    componentData=componentData.sort((a, b) => a.roomsAvailable - b.roomsAvailable);
-    console.log(componentData);
-    
-   
-    let cotainer = document.getElementById("componentContainer");
-    cotainer.innerHTML=""
-
-
-    renderComponents();
-        
     }
 
+    // Function to render components
+    function renderComponents() {
+        const container = document.getElementById("componentContainer");
+        container.innerHTML = componentData.map(generateComponentMarkup).join('');
+    }
+    renderComponents();
+
+    value.addEventListener('change', () => {
+        let c = value.value
+        if (c === "Rate") {
+            console.log("TRUE")
 
 
-  })
-;
+
+            const d1 = document.getElementById("1");
+            const d2 = document.getElementById("2");
+            const d3 = document.getElementById("3");
+            console.log(d1)
+            const r1 = parseInt(document.querySelector("#Rent1").innerText);
+            const r2 = parseInt(document.querySelector("#Rent2").innerText);
+            const r3 = parseInt(document.querySelector("#Rent3").innerText);
 
 
 
-function handleClick(rating, ratingId) {
-  console.log("Rating Selected:", rating, "for", ratingId);
-  
-}
+
+
+            componentData = componentData.sort((a, b) => a.rent - b.rent);
+            console.log(componentData);
+
+
+            let cotainer = document.getElementById("componentContainer");
+            cotainer.innerHTML = "";
+
+
+            renderComponents();
+
+        } else if (c === "Room Capacity") {
+            console.log("TRUE");
+
+
+
+            const d4 = document.getElementById("1");
+            const d5 = document.getElementById("2");
+            const d6 = document.getElementById("3");
+
+            const r4 = parseInt(document.querySelector("#Room1").innerText);
+            const r5 = parseInt(document.querySelector("#Room2").innerText);
+            const r6 = parseInt(document.querySelector("#Room3").innerText);
+
+
+
+
+
+            componentData = componentData.sort((a, b) => a.roomsAvailable - b.roomsAvailable);
+            console.log(componentData);
+
+
+            let cotainer = document.getElementById("componentContainer");
+            cotainer.innerHTML = ""
+
+
+            renderComponents();
+
+        }
+
+
+
+    });
+
+
+
+    function handleClick(rating, ratingId) {
+        console.log("Rating Selected:", rating, "for", ratingId);
+
+    }
 </script>
+
 </html>
