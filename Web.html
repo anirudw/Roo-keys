@@ -8,7 +8,7 @@
 * {
   box-sizing:border-box;
 }
-
+img{object-fit:fill;}
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -90,7 +90,6 @@ img {
   unicode-bidi: bidi-override;
   direction: rtl;
   text-align: left;
-  margin-bottom:10px;
 }
 .rating > input {
   display: none;
@@ -102,61 +101,30 @@ img {
   cursor: pointer;
   color: #ccc; /* Empty star color */
 }
-.rating > input:checked ~ label {
+.rating > input:checked ~ label,
+.rating > label:hover,
+.rating > label:hover ~ label {
   color: #ffca08; /* Selected star color */
 }
-.rating1 {
-  unicode-bidi: bidi-override;
-  direction: rtl;
-  text-align: left;
-  margin-bottom:10px;
-}
-.rating1 > input {
-  display: none;
-}
-.rating1 > label {
-  display: inline-block;
-  margin: 0 5px;
-  font-size: 24px;
-  cursor: pointer;
-  color: #ccc; /* Empty star color */
-}
-.rating1 > input:checked ~ label {
-  color: #ffca08; /* Selected star color */
-}
-.rating2 {
-  unicode-bidi: bidi-override;
-  direction: rtl;
-  text-align: left;
-  margin-bottom:10px;
-}
-.rating2 > input {
-  display: none;
-}
-.rating2 > label {
-  display: inline-block;
-  margin: 0 5px;
-  font-size: 24px;
-  cursor: pointer;
-  color: #ccc; /* Empty star color */
-}
-.rating2 > input:checked ~ label {
-  color: #ffca08; /* Selected star color */
-}
-
 </style>
 </head>
 <body>
-<div >
+<div  >
   <div class=" flex flex-row justify-between">
-    <select name="cars" id="cars">
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="mercedes">Mercedes</option>
-      <option value="audi">Audi</option>
+    <filter>
+    <label for="filter">Filters</label>    
+    <select name="filters" id="filter" class="border-solid">
+      <option value="Dist">Distance from Cet</option>
+      <option value="Rate">Rate</option>
+      <option value="Room Capacity">Room Capacity</option>
+      <option value="Rating">Rating</option>
+      <option value="Rate">Rate</option>
+    
+   
     </select>
+    </filter>
 
-<h1 class="large-font mr-24 font-mono">Roomies </h1>
+<h1 class="large-font mr-44 font-mono">Roomies </h1>
 
 
 <div></div>
@@ -166,147 +134,157 @@ img {
     <input type="text" placeholder="Search" class="s">
 </div>
 
-<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 inline-block mr-24 ml-20 mt-10">
-    <a href="#">
-        <img class="rounded-t-lg" src="image-1.jpg" alt="" />
-    </a>
-    <div class="p-5">
-        <a href="#">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Sally's Homes</h5>
-        </a>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><ul>
-          <li>Rent:2500/- </li>
-          <li>Mess availabe(Additional charges may apply)</li>
-          <li>Contact 944754874</li>
+<div id="componentContainer"></div>
 
-    
-        </ul></p>
-        <p class="text-green-300">3 rooms available!!!</p>
-        <div class="rating">
-          <input type="radio" id="star5" name="rating" value="5">
-          <label for="star5">&#9733;</label>
-          <input type="radio" id="star4" name="rating" value="4">
-          <label for="star4">&#9733;</label>
-          <input type="radio" id="star3" name="rating" value="3">
-          <label for="star3">&#9733;</label>
-          <input type="radio" id="star2" name="rating" value="2">
-          <label for="star2">&#9733;</label>
-          <input type="radio" id="star1" name="rating" value="1">
-          <label for="star1">&#9733;</label>
-        </div>
-        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            Read more
-             <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-            </svg>
-        </a>
-    </div>
-</div>
-<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 inline-block mr-20 mt-10">
-    <a href="#">
-        <img class="rounded-t-lg" src="image-1.jpg" alt="" />
-    </a>
-    <div class="p-5">
-        <a href="#">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-        </a>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-        <div class="rating1">
-          <input type="radio" id="1star5" name="rating" value="5">
-          <label for="star5">&#9733;</label>
-          <input type="radio" id="1star4" name="rating" value="4">
-          <label for="star4">&#9733;</label>
-          <input type="radio" id="1star3" name="rating" value="3">
-          <label for="star3">&#9733;</label>
-          <input type="radio" id="1star2" name="rating" value="2">
-          <label for="star2">&#9733;</label>
-          <input type="radio" id="1star1" name="rating" value="1">
-          <label for="star1">&#9733;</label>
-        </div>
-        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            Read more
-             <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-            </svg>
-        </a>
-    </div>
-</div>
-<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 inline-block mr-20 mt-10">
-    <a href="#">
-        <img class="rounded-t-lg" src="image-1.jpg" alt="" />
-    </a>
-    <div class="p-5">
-        <a href="#">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-        </a>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-        <div class="rating2">
-          <input type="radio" id="2star5" name="rating" value="5">
-          <label for="star5">&#9733;</label>
-          <input type="radio" id="2star4" name="rating" value="4">
-          <label for="star4">&#9733;</label>
-          <input type="radio" id="2star3" name="rating" value="3">
-          <label for="star3">&#9733;</label>
-          <input type="radio" id="2star2" name="rating" value="2">
-          <label for="star2">&#9733;</label>
-          <input type="radio" id="2star1" name="rating" value="1">
-          <label for="star1">&#9733;</label>
-        </div>
-
-        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            Read more
-             <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-            </svg>
-        </a>
-    </div>
-</div>
+<div id="componentContainer"></div>
 
 
-<!-- The App Section 
-<div class="container">
-  <div class="row">
-    <div class="column-66">
-      <h1 class="xlarge-font"><b>The App</b></h1>
-      <h1 class="large-font" style="color:MediumSeaGreen;"><b>Why buy it?</b></h1>
-      <p><span style="font-size:36px">Take photos like a pro.</span> You should buy this app because lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <button class="button">Download Application</button>
-    </div>
-    <div class="column-33">
-        <img src="/w3images/img_app.jpg" width="335" height="471">
-    </div>
-  </div>
-</div>-->
-
-<!-- Clarity Section 
-<div class="container" style="background-color:#f1f1f1">
-  <div class="row">
-    <div class="column-33">
-      <img src="/w3images/app5.jpg" alt="App" width="335" height="471">
-    </div>
-    <div class="column-66">
-      <h1 class="xlarge-font"><b>Clarity</b></h1>
-      <h1 class="large-font" style="color:red;"><b>Pixels, who?</b></h1>
-      <p><span style="font-size:24px">A revolution in resolution.</span> Sharp and clear photos with the world's best photo engine, incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquipex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-      <button class="button" style="background-color:red">Read More</button>
-    </div>
-  </div>
-</div>
-
-The App Section 
-<div class="container">
-  <div class="row">
-    <div class="column-66">
-      <h1 class="xlarge-font"><b>The App</b></h1>
-      <h1 class="large-font" style="color:MediumSeaGreen;"><b>Why buy it?</b></h1>
-      <p><span style="font-size:36px">Take photos like a pro.</span> You should buy this app because lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-      <button class="button">Download Application</button>
-    </div>
-    <div class="column-33">
-        <img src="/w3images/img_app.jpg" width="335" height="471" >
-    </div>
-  </div>
-</div>-->
 
 </body>
+<script>
+
+const value=document.querySelector("select")
+  console.log(value)
+  let componentData = [
+            {
+                id: 1,
+                name: "Sally's Homes",
+                rent: 2500,
+                roomsAvailable: 3
+            },
+            {
+                id: 2,
+                name: "Noteworthy",
+                rent: 4500,
+                roomsAvailable: 2
+            },
+            {
+                id: 3,
+                name: "Noteworthy",
+                rent: 2500,
+                roomsAvailable: 2
+            }
+            // Add more data objects as needed
+        ];
+
+        // Function to generate HTML markup for a single component
+        function generateComponentMarkup(data) {
+            return `
+            <div id="${data.id}" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 inline-block mr-10 ml-16 mt-10">
+                <a href="#">
+                    <img class="rounded-t-lg" src="4.webp" alt="" />
+                </a>
+                <div class="p-5">
+                    <a href="#">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">${data.name}</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                        <ul>
+                            <li>Rent:<span id="Rent${data.id}">${data.rent}</span>/- </li>
+                            <li>Mess availabe(Additional charges may apply)</li>
+                            <li>Contact 944754874</li>
+                        </ul>
+                    </p>
+                    <p class="text-green-300" id="Room${data.id}">${data.roomsAvailable} rooms available!!!</p>
+                    <div class="rating mb-4" id="rating${data.id}">
+                        <input type="radio" id="star51" name="rating${data.id}" value="5">
+                        <label for="star51" onclick="handleClick(5, 'rating${data.id}')">&#9733;</label>
+                        <input type="radio" id="star41" name="rating${data.id}" value="4">
+                        <label for="star41" onclick="handleClick(4, 'rating${data.id}')">&#9733;</label>
+                        <input type="radio" id="star31" name="rating${data.id}" value="3">
+                        <label for="star31" onclick="handleClick(3, 'rating${data.id}')">&#9733;</label>
+                        <input type="radio" id="star21" name="rating${data.id}" value="2">
+                        <label for="star21" onclick="handleClick(2, 'rating${data.id}')">&#9733;</label>
+                        <input type="radio" id="star11" name="rating${data.id}" value="1">
+                        <label for="star11" onclick="handleClick(1, 'rating${data.id}')">&#9733;</label>
+                    </div>
+                    <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        Read more
+                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            `;
+        }
+
+        // Function to render components
+        function renderComponents() {
+            const container = document.getElementById("componentContainer");
+            container.innerHTML = componentData.map(generateComponentMarkup).join('');
+        }
+        renderComponents();
+  
+  value.addEventListener('change',()=>{
+  let c=value.value
+  if(c==="Rate"){
+    console.log("TRUE")
+
+  
+
+    const d1 = document.getElementById("1");
+    const d2 = document.getElementById("2");
+    const d3 = document.getElementById("3");
+    console.log(d1)
+    const r1 = parseInt(document.querySelector("#Rent1").innerText);
+    const r2 = parseInt(document.querySelector("#Rent2").innerText);
+    const r3 = parseInt(document.querySelector("#Rent3").innerText);
+    
+    
+    
+
+    
+    componentData=componentData.sort((a, b) => a.rent - b.rent);
+    console.log(componentData);
+    
+   
+    let cotainer = document.getElementById("componentContainer");
+    cotainer.innerHTML="";
+
+
+    renderComponents();
+        
+    }
+  else if(c==="Room Capacity"){
+    console.log("TRUE");
+
+  
+
+    const d4 = document.getElementById("1");
+    const d5 = document.getElementById("2");
+    const d6 = document.getElementById("3");
+    
+    const r4 = parseInt(document.querySelector("#Room1").innerText);
+    const r5 = parseInt(document.querySelector("#Room2").innerText);
+    const r6 = parseInt(document.querySelector("#Room3").innerText);
+    
+    
+    
+
+    
+    componentData=componentData.sort((a, b) => a.roomsAvailable - b.roomsAvailable);
+    console.log(componentData);
+    
+   
+    let cotainer = document.getElementById("componentContainer");
+    cotainer.innerHTML=""
+
+
+    renderComponents();
+        
+    }
+
+
+
+  })
+;
+
+
+
+function handleClick(rating, ratingId) {
+  console.log("Rating Selected:", rating, "for", ratingId);
+  
+}
+</script>
 </html>
