@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing:border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  padding: 64px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+.column-66 {
+  float: left;
+  width: 66.66666%;
+  padding: 20px;
+}
+
+.column-33 {
+  float: left;
+  width: 33.33333%;
+  padding: 20px;
+}
+
+.large-font {
+  font-size: 48px;
+}
+
+.xlarge-font {
+  font-size: 64px
+}
+.d{
+ display:grid;
+ justify-content: center;
+}
+.s{ 
+    margin-top:100px;
+    width:600px;
+    height:55px;
+    font-size:large;
+    border-radius:20px;
+    border-color: rgba(222, 222, 238, 0.882);
+    text-align:center;
+    box-shadow: 0px 1px 6px rgba(0,0,0,0.2);
+    border:none;
+
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #04AA6D;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .column-66,
+  .column-33 {
+    width: 100%;
+    text-align: center;
+  }
+  img {
+    margin: auto;
+  }
+}
+
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  text-align: left;
+  margin-bottom:10px;
+}
+.rating > input {
+  display: none;
+}
+.rating > label {
+  display: inline-block;
+  margin: 0 5px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ccc; /* Empty star color */
+}
+.rating > input:checked ~ label {
+  color: #ffca08; /* Selected star color */
+}
+.rating1 {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  text-align: left;
+  margin-bottom:10px;
+}
+.rating1 > input {
+  display: none;
+}
+.rating1 > label {
+  display: inline-block;
+  margin: 0 5px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ccc; /* Empty star color */
+}
+.rating1 > input:checked ~ label {
+  color: #ffca08; /* Selected star color */
+}
+.rating2 {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  text-align: left;
+  margin-bottom:10px;
+}
+.rating2 > input {
+  display: none;
+}
+.rating2 > label {
+  display: inline-block;
+  margin: 0 5px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ccc; /* Empty star color */
+}
+.rating2 > input:checked ~ label {
+  color: #ffca08; /* Selected star color */
+}
+
+</style>
+</head>
+<body>
+<div >
+  <div class=" flex flex-row justify-between">
+    <select name="cars" id="cars">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option>
+    </select>
+
+<h1 class="large-font mr-24 font-mono">Roomies </h1>
+
+
+<div></div>
+</div>
+<div class="d"
+>
+    <input type="text" placeholder="Search" class="s">
+</div>
+
+<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 inline-block mr-24 ml-20 mt-10">
+    <a href="#">
+        <img class="rounded-t-lg" src="image-1.jpg" alt="" />
+    </a>
+    <div class="p-5">
+        <a href="#">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Sally's Homes</h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><ul>
+          <li>Rent:2500/- </li>
+          <li>Mess availabe(Additional charges may apply)</li>
+          <li>Contact 944754874</li>
+
+    
+        </ul></p>
+        <p class="text-green-300">3 rooms available!!!</p>
+        <div class="rating">
+          <input type="radio" id="star5" name="rating" value="5">
+          <label for="star5">&#9733;</label>
+          <input type="radio" id="star4" name="rating" value="4">
+          <label for="star4">&#9733;</label>
+          <input type="radio" id="star3" name="rating" value="3">
+          <label for="star3">&#9733;</label>
+          <input type="radio" id="star2" name="rating" value="2">
+          <label for="star2">&#9733;</label>
+          <input type="radio" id="star1" name="rating" value="1">
+          <label for="star1">&#9733;</label>
+        </div>
+        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            Read more
+             <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+            </svg>
+        </a>
+    </div>
+</div>
+<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 inline-block mr-20 mt-10">
+    <a href="#">
+        <img class="rounded-t-lg" src="image-1.jpg" alt="" />
+    </a>
+    <div class="p-5">
+        <a href="#">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+        <div class="rating1">
+          <input type="radio" id="1star5" name="rating" value="5">
+          <label for="star5">&#9733;</label>
+          <input type="radio" id="1star4" name="rating" value="4">
+          <label for="star4">&#9733;</label>
+          <input type="radio" id="1star3" name="rating" value="3">
+          <label for="star3">&#9733;</label>
+          <input type="radio" id="1star2" name="rating" value="2">
+          <label for="star2">&#9733;</label>
+          <input type="radio" id="1star1" name="rating" value="1">
+          <label for="star1">&#9733;</label>
+        </div>
+        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            Read more
+             <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+            </svg>
+        </a>
+    </div>
+</div>
+<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 inline-block mr-20 mt-10">
+    <a href="#">
+        <img class="rounded-t-lg" src="image-1.jpg" alt="" />
+    </a>
+    <div class="p-5">
+        <a href="#">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+        <div class="rating2">
+          <input type="radio" id="2star5" name="rating" value="5">
+          <label for="star5">&#9733;</label>
+          <input type="radio" id="2star4" name="rating" value="4">
+          <label for="star4">&#9733;</label>
+          <input type="radio" id="2star3" name="rating" value="3">
+          <label for="star3">&#9733;</label>
+          <input type="radio" id="2star2" name="rating" value="2">
+          <label for="star2">&#9733;</label>
+          <input type="radio" id="2star1" name="rating" value="1">
+          <label for="star1">&#9733;</label>
+        </div>
+
+        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            Read more
+             <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+            </svg>
+        </a>
+    </div>
+</div>
+
+
+<!-- The App Section 
+<div class="container">
+  <div class="row">
+    <div class="column-66">
+      <h1 class="xlarge-font"><b>The App</b></h1>
+      <h1 class="large-font" style="color:MediumSeaGreen;"><b>Why buy it?</b></h1>
+      <p><span style="font-size:36px">Take photos like a pro.</span> You should buy this app because lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <button class="button">Download Application</button>
+    </div>
+    <div class="column-33">
+        <img src="/w3images/img_app.jpg" width="335" height="471">
+    </div>
+  </div>
+</div>-->
+
+<!-- Clarity Section 
+<div class="container" style="background-color:#f1f1f1">
+  <div class="row">
+    <div class="column-33">
+      <img src="/w3images/app5.jpg" alt="App" width="335" height="471">
+    </div>
+    <div class="column-66">
+      <h1 class="xlarge-font"><b>Clarity</b></h1>
+      <h1 class="large-font" style="color:red;"><b>Pixels, who?</b></h1>
+      <p><span style="font-size:24px">A revolution in resolution.</span> Sharp and clear photos with the world's best photo engine, incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquipex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      <button class="button" style="background-color:red">Read More</button>
+    </div>
+  </div>
+</div>
+
+The App Section 
+<div class="container">
+  <div class="row">
+    <div class="column-66">
+      <h1 class="xlarge-font"><b>The App</b></h1>
+      <h1 class="large-font" style="color:MediumSeaGreen;"><b>Why buy it?</b></h1>
+      <p><span style="font-size:36px">Take photos like a pro.</span> You should buy this app because lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      <button class="button">Download Application</button>
+    </div>
+    <div class="column-33">
+        <img src="/w3images/img_app.jpg" width="335" height="471" >
+    </div>
+  </div>
+</div>-->
+
+</body>
+</html>
