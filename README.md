@@ -12,7 +12,7 @@ www.github.com/KK-8848
 MEmber 2 Github Link
 www.github.com/anirudw
 ## Idea
-Breif Idea in two three sentences 
+A website for students to find private hostels, compare rates and facilities. Our goal is to reduce the monopoly of the private hostels in turn to help the customers be in charge.
 
 ## Features 
 1. 
