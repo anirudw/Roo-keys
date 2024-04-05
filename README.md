@@ -15,21 +15,23 @@ www.github.com/anirudw
 A website for students to find private hostels, compare rates and facilities. Our goal is to reduce the monopoly of the private hostels in turn to help the customers be in charge.
 
 ## Features 
-1. 
+1. Sorting hostels can be performed based on different parameters-Fees and rating.
+2. Fetching user reviews
+3. Fetching data from a predefined data base.
 
 ## Link to product walkthrough
-[link to video](Link Here)
+[](https://drive.google.com/file/d/1dpROhxCsTtxOIn9hA6g1yzylh3-dPhw3/view?usp=drivesdk)
 
-   
-## Libraries used
-Library Name - Version
+
 
 
 ## How to configure
-Instructions for setting up project
+Firebase database maybe configured
 
 ## How to Run
-Instructions for running
+The Web.html file can be run just like any other html file.
 
 ## How to contribute ? 
-Features to implement 
+1. User authentication can be setup to avoid fakery.
+2. Webpages can be created so as to redirect the user to see more information about the specific hostel - like fee info, mess menu, review etc.
+3. Provisions can be made such that hostels themselves can create profiles in the website to be discovered by the customers.
